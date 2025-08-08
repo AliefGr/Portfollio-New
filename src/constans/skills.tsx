@@ -49,5 +49,11 @@ export const Skils = [
         name : "TypeScript",
         designation: " ",
         image : "/typescript.svg"
+    },
+    {
+        id : 9, 
+        name : "TypeScript",
+        designation: " ",
+        image : "/typescript.svg"
     }
 ]
