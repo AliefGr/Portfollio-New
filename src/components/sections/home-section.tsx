@@ -1,7 +1,9 @@
 import About from "../contents/about"
 import Hero from "../contents/hero"
 import Skills from "../contents/my-skills"
-import Project from "../contents/project"
+// import Project from "../contents/project"
+import ProjectsList from "../contents/project-list"
+import ProjectsPage from "../contents/projects"
 import Wrapper from "../utils/wrapper"
 
 const HomeSection = () => {
@@ -19,7 +21,9 @@ const HomeSection = () => {
                 <Skills/>
             </Wrapper>
             <Wrapper>
-                <Project/>
+                {/* <Project/> */}
+                <ProjectsPage/>
+                {/* <ProjectsList/> */}
             </Wrapper>
     </div>
     )

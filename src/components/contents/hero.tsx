@@ -23,7 +23,7 @@ const Hero = () => {
         </div>
         <div className="flex flex-col gap-2 flex-shrink-0">
                     <p className="text-sm font-medium text-foreground/70">
-                        Shreyas Welcome&apos;s you!
+                        Hi, I'm Alief Gr
                     </p>
                 </div>
       </AnimationContainer>
