@@ -30,7 +30,7 @@ const Hero = () => {
 
       {/* Teks Hero */}
       <div className="text-balance relative z-20 mx-auto my-4 max-w-5xl text-center text-4xl lg:text-5xl font-bold">
-                        <motion.h2 className="text-balance !leading-snug">
+                        <motion.h2 className="text-balance !leading-snug text-foreground">
                             {"Building Digital Solutions that Make a Difference"
                                 .split(" ")
                                 .map((word, index) => (

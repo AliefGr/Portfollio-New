@@ -11,7 +11,7 @@ const Skills = () => {
         {/* <Example/> */}
                 <AnimationContainer animation='slide-up' className='flex items-center justify-center overflow-hidden w-full'>
                     <div className=''>
-                        <h2 className='text-2xl lg:text-3xl font-bold text-left w-full'>My Skills</h2>
+                        <h2 className='text-2xl lg:text-3xl font-bold text-left w-full text-foreground'>My Skills</h2>
                         <div className="my-2 h-[1px] w-full bg-gradient-to-r from-transparent via-blue-300 to-transparent dark:via-blue-700" />
                     </div>
                 </AnimationContainer>

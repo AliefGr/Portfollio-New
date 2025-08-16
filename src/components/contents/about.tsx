@@ -6,13 +6,13 @@ const About = () => {
     <div className='w-full relative pt-10 pb-20 z-40'>
         <AnimationContainer animation='slide-up' className='flex items-center justify-center overflow-hidden w-full'>
             <div className=''>
-                <h2 className='text-2xl lg:text-3xl font-bold text-left w-full'>About Me</h2>
+                <h2 className='text-2xl lg:text-3xl font-bold text-left w-full text-foreground'>About Me</h2>
                 <div className="my-2 h-[1px] w-full bg-gradient-to-r from-transparent via-blue-300 to-transparent dark:via-blue-700" />
             </div>
         </AnimationContainer>
         <AnimationContainer animation='slide-up' className='flex items-center justify-center overflow-hidden w-full mx-auto pt-10'>
             <div className='w-full flex items-center justify-center'>
-              <p className='text-base md:text-lg text-justify w-full '>I am a passionate software developer and designer dedicated to crafting exceptional digital experiences.
+              <p className='text-base md:text-lg text-justify w-full text-foreground/70'>I am a passionate software developer and designer dedicated to crafting exceptional digital experiences.
                         With expertise in both development and design, I bring a unique perspective to every project,
                         ensuring seamless functionality meets stunning aesthetics. My approach combines clean code architecture
                         with intuitive user interfaces, creating solutions that not only work flawlessly but also delight users.

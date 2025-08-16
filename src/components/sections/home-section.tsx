@@ -1,3 +1,4 @@
+import Contact  from "../contents/contact"
 import About from "../contents/about"
 import Hero from "../contents/hero"
 import Skills from "../contents/my-skills"
@@ -5,6 +6,7 @@ import Skills from "../contents/my-skills"
 import ProjectsList from "../contents/project-list"
 import ProjectsPage from "../contents/projects"
 import Wrapper from "../utils/wrapper"
+import Footer from "../contents/footer"
 
 const HomeSection = () => {
     return (
@@ -24,6 +26,9 @@ const HomeSection = () => {
                 {/* <Project/> */}
                 <ProjectsPage/>
                 {/* <ProjectsList/> */}
+            </Wrapper>
+            <Wrapper>
+                <Contact/>
             </Wrapper>
     </div>
     )

@@ -1,45 +1,36 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-@layer base {
-  .dark {
-    --main-background: 240, 6%, 3%;
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+/* @custom-variant dark (&:is(.dark *)); */
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
-
-    --radius: 0.5rem;
-  }
+@theme {
+  --color-background: #000;
+  --color-foreground: #fafafa;
+  --color-card: #0a0a0a;
+  --color-card-foreground: #fafafa;
+  --color-popover: #0a0a0a;
+  --color-popover-foreground: #fafafa;
+  --color-primary: #fafafa;
+  --color-primary-foreground: #18181b;
+  --color-secondary: #262626;
+  --color-secondary-foreground: #fafafa;
+  --color-muted: #262626;
+  --color-muted-foreground: #a1a1aa;
+  --color-accent: #262626;
+  --color-accent-foreground: #fafafa;
+  --color-destructive: #4c0519;
+  --color-destructive-foreground: #fafafa;
+  --color-border: #262626;
+  --color-input: #262626;
+  --color-ring: #d4d4d8;
+  --radius: 0.5rem;
 }
 
+
 :root {
-  --background: #000000 ; /* gelap */
-  --bgCard :  240, 6%, 3%;
-  --foreground: #e2e8f0; /* teks terang */
-  
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
 
@@ -66,43 +57,88 @@
     --ring: 240 4.9% 83.9%;
 
     --radius: 0.5rem;
-}
+  }
 
-/* .dark {
-  --background: #0f172a;
-  --foreground: #e2e8f0;
+/* @theme dark {
+  --color-background: #ffffff;
+  --color-foreground: #0a0a0a;
+  --color-card: #ffffff;
+  --color-card-foreground: #0a0a0a;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #0a0a0a;
+  --color-primary: #18181b;
+  --color-primary-foreground: #fafafa;
+  --color-secondary: #f4f4f5;
+  --color-secondary-foreground: #18181b;
+  --color-muted: #f4f4f5;
+  --color-muted-foreground: #74747a;
+  --color-accent: #f4f4f5;
+  --color-accent-foreground: #18181b;
+  --color-destructive: #dc2626;
+  --color-destructive-foreground: #fafafa;
+  --color-border: #e4e4e7;
+  --color-input: #e4e4e7;
+  --color-ring: #0a0a0a;
+  --radius: 0.5rem;
 } */
 
-body {
+@layer components {
+  .prose-container {
+    @apply w-full max-w-full;
+  }
+
+  .prose-container pre {
+    @apply w-full max-w-full overflow-x-auto;
+  }
+
+  .prose-container code {
+    @apply whitespace-pre-wrap break-words;
+  }
+}
+
+::selection {
+  background-color: rgb(0, 112, 243);
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
   background-color: var(--background);
-  color: var(--foreground);
 }
 
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-.spin-slow {
-  animation: spin-slow 1s linear infinite;
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  border-radius: 5px;
+  background-color: hsl(var(--muted)) !important;
 }
 
-/* globals.css */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-.scrollbar-hide {
-  -ms-overflow-style: none;  /* IE & Edge */
-  scrollbar-width: none;  /* Firefox */
+/* * {
+  cursor: none !important;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+  cursor: none !important;
+} */
 
-/* Wave hand */
-.wave {
-  animation-name: wave-animation;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-  transform-origin: 70% 70%;
-  display: inline-block;
+img,
+image {
+  user-select: none;
+  pointer-events: none;
+}
+
+a,
+button,
+input,
+textarea,
+select,
+label,
+option {
+  /* cursor: none !important; */
 }
 
 .flare {
@@ -117,6 +153,16 @@ body {
   background-color: #0000005e;
   transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
   cursor: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .flare {
+    display: none;
+    width: 0;
+    height: 0;
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out,
+      opacity 0.2s ease-in-out;
+  }
 }
 
 .flare.pointer {
@@ -177,6 +223,30 @@ body {
   animation: rotate calc(var(--uib-speed) * 4) linear infinite;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 404 */
+.custom-shadow {
+  box-shadow: rgba(59, 130, 246, 0.3) 5px 5px;
+}
+
+/* Wave hand */
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
 @keyframes wave-animation {
   0% {
     transform: rotate(0.0deg);
@@ -219,6 +289,35 @@ body {
 
   40% {
     transform: translateY(100px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-animation {
+  animation: float 15s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  /* 
+    - 8s is the duration (adjust as needed)
+    - cubic-bezier gives us the easing effect:
+      - faster going down (0.4, 0)
+      - slower coming up (0.2, 1)
+    - infinite makes it loop forever
+  */
+}
+
+.float2-animation {
+  animation: float2 20s cubic-bezier(0.3, 0, 0.2, 1) infinite;
+}
+
+@keyframes float2 {
+  0% {
+    transform: translateY(0px);
+  }
+
+  40% {
+    transform: translateY(-100px);
   }
 
   100% {

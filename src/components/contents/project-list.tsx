@@ -26,7 +26,7 @@ export default function ProjectsList({ projects }: ProjectsListProps) {
         className="flex items-center justify-center overflow-hidden w-full mx-auto"
       >
         <div className="w-full">
-          <h2 className="text-2xl lg:text-3xl font-medium text-left w-full">
+          <h2 className="text-2xl lg:text-3xl font-medium text-left w-full text-foreground">
             Featured Projects
           </h2>
         </div>

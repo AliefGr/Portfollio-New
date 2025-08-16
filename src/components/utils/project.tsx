@@ -101,7 +101,7 @@ const Project = ({ project }: Props) => {
               <Button
                 variant="outline"
                 size="sm"
-                className="hover:bg-zinc-800 cursor-pointer"
+                className="hover:bg-zinc-800 cursor-pointer text-foreground"
               >
                 <Icons.github className="size-4 mr-2" />
                 GitHub
